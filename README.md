@@ -27,6 +27,6 @@
 管理员：admin/123456
 普通用户：李四/123456
 ## 六、安装教程
-使用Navicat或者其它工具，在mysql中创建对应名称的数据库，并执行项目的sql
-使用IDEA导入后端项目；使用vscode导入前端项目，并使用pnpm i下载依赖
-使用pnpm run dev 启动前端项目，并运行后端，访问http://localhost:8081
+1.使用Navicat或者其它工具，在mysql中创建对应名称的数据库，并执行项目的sql
+2.使用IDEA导入后端项目；使用vscode导入前端项目，并使用pnpm i下载依赖
+3.使用pnpm run dev 启动前端项目，并运行后端，访问http://localhost:8081
