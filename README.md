@@ -6,9 +6,9 @@
 ### 管理员
 职员管理、岗位管理、角色管理、部门管理、邮件管理
 ## 二、所用技术
-后端技术栈：
-  Spring、SpringMVC、SpringBoot、redis、mybatis、mybatis-plus、任务管理、消息服务、邮件任务
-前端技术
+后端技术栈：<br>
+  Spring、SpringMVC、SpringBoot、redis、mybatis、mybatis-plus、任务管理、消息服务、邮件任务 <br>
+前端技术<br>
   Vue-pure-element、pinia、axios
 ## 三、环境介绍
 基础环境IDEA，JDK1.8 Mysql 5.7及以上, Maven3.9
@@ -23,10 +23,10 @@
 ![用户求职投递简历界面](https://github.com/user-attachments/assets/3d2db7b9-c31e-4854-b873-74b5d19d0c73)
 ![发送邮件（投递简历）](https://github.com/user-attachments/assets/f2e3ad0e-5ac5-4ecf-b7bd-f4efc3120fc8)
 ## 五、访问地址
-访问地址：http://localhost:8081
-管理员：admin/123456
+访问地址：http://localhost:8081<br>
+管理员：admin/123456<br>
 普通用户：李四/123456
 ## 六、安装教程
-1.使用Navicat或者其它工具，在mysql中创建对应名称的数据库，并执行项目的sql
-2.使用IDEA导入后端项目；使用vscode导入前端项目，并使用pnpm i下载依赖
-3.使用pnpm run dev 启动前端项目，并运行后端，访问http://localhost:8081
+1.使用Navicat或者其它工具，在mysql中创建对应名称的数据库，并执行项目的sql<br>
+2.使用IDEA导入后端项目；使用vscode导入前端项目，并使用pnpm i下载依赖<br>
+3.使用pnpm run dev 启动前端项目，并运行后端，访问http://localhost:8081<br>
