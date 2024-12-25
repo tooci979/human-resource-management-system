@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yinjie.dao.EmployeeDao">
+    <!--job一对一查询所在部门 -->
+    <!--    一个部门所要招收的 岗位-->
+
+    <resultMap id="EmployeeApartmentJobMap" type="com.yinjie.domin.Employee">
+        <result property="job.id" column="j_id"></result>
+        <result property="job.name" column="j_name"></result>
+        <result property="job.apartment.department" column="department"></result>
+        <result property="job.apartmentId" column="apartment_id"></result>
+
+    </resultMap>
+    <select id="findAllJobAndApartmentAndEmployee" resultMap="EmployeeApartmentJobMap">
+        select e.*, j.name j_name, a.department
+        from employee e,
+             job j,
+             apartment a
+        where e.job_id = j.id
+          and j.apartment_id = a.id
+    </select>
+
+
+    <select id="findAllJobAndApartmentAndEmployeePage" resultMap="EmployeeApartmentJobMap">
+        select e.*, j.name j_name, a.department,j.apartment_id,j.id j_id
+        from employee e
+        JOIN job j ON e.job_id = j.id
+        JOIN apartment a ON j.apartment_id = a.id
+        ${ew.customSqlSegment}
+    </select>
+</mapper>

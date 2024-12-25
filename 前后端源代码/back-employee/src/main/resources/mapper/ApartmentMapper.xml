@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yinjie.dao.ApartmentDao">
+    <!--job一对一查询所在部门 -->
+    <!--    一个部门所要招收的 岗位-->
+
+    <resultMap id="ApartmentMap" type="com.yinjie.domin.Apartment">
+        <result property="createdDate" column="created_date"></result>
+    </resultMap>
+    <select id="findApartmentAll" resultMap="ApartmentMap">
+        select * from apartment
+    </select>
+
+</mapper>

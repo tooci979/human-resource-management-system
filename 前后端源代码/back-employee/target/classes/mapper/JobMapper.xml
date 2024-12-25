@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yinjie.dao.JobDao">
+<!--job一对一查询所在部门 -->
+<!--    一个部门所要招收的 岗位-->
+
+    <resultMap id="ApartmentJobMap" type="com.yinjie.domin.Job">
+
+        <result property="apartment.department" column="department"></result>
+
+    </resultMap>
+    <select id="findAllJobAndApartment" resultMap="ApartmentJobMap">
+        SELECT j.*,a.department FROM job j JOIN apartment a ON a.id = j.apartment_id
+            ${ew.customSqlSegment}
+
+    </select>
+    <select id="sendEmailFind" resultMap="ApartmentJobMap">
+
+        SELECT j.*,a.department FROM job j JOIN apartment a
+            ON a.id = j.apartment_id WHERE apartment_id=${ApartmentId} and  name = '${JobName}'
+    </select>
+
+
+
+</mapper>

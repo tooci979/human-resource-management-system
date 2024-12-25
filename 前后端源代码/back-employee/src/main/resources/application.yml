@@ -1,0 +1,42 @@
+server:
+  port: 8081
+#配置数据源
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/back_employee?serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 20
+    minIdle: 10
+    maxActive: 100
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 3462194490@qq.com
+    password: gxylvamiwwpsdaja
+    default-encoding: UTF-8
+  servlet:
+    multipart.max-file-size: 50MB
+    multipart.max-request-size: 50MB
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+
+
+spring.rabbitmq.host: 192.168.20.128
+spring.rabbitmq.port: 5672
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml  #扫描Mapper下的xml文件
+  type-aliases-package: com.yinjie.domain
+  configuration:
+    map-underscore-to-camel-case: true  #改为驼峰命名法
+    auto-mapping-behavior: full  #所有的映射行为
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #查看MP运行日志
+  global-config:
+    db-config:
+      id-type: auto  #设置主键id字段的生成策略为参照数据库设定的策略，当前数据库设置id生成策略为自增
+
